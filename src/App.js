@@ -27,7 +27,7 @@ var App = React.createClass({
     return (
       <div className="time">
         <h1>Time thing.</h1>
-        <p>A simple utility for converting date/time and UNIX timestmap.</p>
+        <p>A simple utility for converting date/time and UNIX timestamp.</p>
         <input placeholder="Type a date or timestamp..." className="time__input" autoFocus={true} ref="input" type="text" onKeyUp={_.debounce(this._onInputKeyUp, 150)} />
         {this.state.parsedDate == null && this.state.inputString && <span className="time__error">Sorry, not sure how to parse that. <a href="https://github.com/strobedigital/timething/issues" target="_blank">Submit a bug</a>.</span>}
         {this.state.parsedDate == null && this.state.inputString.length == 0 && <span className="time__info">Example formats: '12-12-2015' or 'last week' or '1423440000'</span>}
